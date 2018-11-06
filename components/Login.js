@@ -9,14 +9,13 @@ import {
 export default class Login extends Component {
     render() {
         return (
-            <KeyboardAvoidingView behavior='padding' style={styles.container}>
                 <TouchableWithoutFeedback style={styles.container} onPress={Keyboard.dismiss}>
                     <View style={styles.container}>
                         <View style={styles.logoContainer}>
                             <Image style={styles.logo}
                                 source={require('../images/logo.png')}>
                             </Image>
-                            <Text style={styles.title}>Información de Ingreso</Text>
+                            <Text style={styles.title}>Sistema Multiple Administrativo</Text>
                         </View>
                         <View style={styles.infoContainer}>
                             <TextInput style={styles.input}
@@ -39,8 +38,7 @@ export default class Login extends Component {
                         </View>
                     </View>
                 </TouchableWithoutFeedback>
-            </KeyboardAvoidingView>
-        )
+            )
     }
 }
 const styles = StyleSheet.create({
@@ -52,7 +50,8 @@ const styles = StyleSheet.create({
     logoContainer: {
         alignItems: 'center',
         justifyContent: 'center',
-        flex: 1
+        flex: 1,
+        marginBottom: 100,
     },
     logo:{
         width: 128,
@@ -69,10 +68,10 @@ const styles = StyleSheet.create({
         position: 'absolute',
         left: 0,
         right: 0,
-        bottom:0,
+        bottom: 30,
         height: 200,
-        padding: 20,
-        //backgroundColor: 'red',
+        padding: 0,
+        paddingHorizontal: 50,
     },
     input: {
         height: 40,
